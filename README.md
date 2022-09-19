@@ -1,3 +1,34 @@
+# REACT JS-Comision-38110
+Coder House - Curso React JS - Comisión #38110
+
+Alumno: RAMIRO O. VECHIOLA
+
+Profesor: Félix Blanco
+
+PREENTREGA JUEVES 22/09/2022
+Primera pre-entrega del Proyecto Final:
+
+Consigna:
+
+1- Crea una carpeta dentro de src llamada components que contenga la implementación del componente NavBar dentro del archivo NavBar.js. Su funcionalidad es la de renderizar una barra de menú (Navbar):
+
+    @ Brand (título/nombre de la tienda).
+    @ Un listado de categorías clickeables.
+    @ Incorpora alguna librería de estilos.
+
+2- Crea un componente CartWidget.js con un ícono y ubícalo en el navbar. Agrega estilos, inclúyelo dentro de NavBar.js para que esté visible en todo momento.
+
+3- Crea un componente contenedor ItemListContainer.js con una prop greeting, y muestra el mensaje dentro del contenedor con el styling integrado. Impórtalo dentro de App.js, y abajo de NavBar.js. 
+
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+
+
+# ↓ REACT APLICATION REDAME AUTOMATICALLY CREATED ↓
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

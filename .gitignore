@@ -2,6 +2,7 @@
 
 # dependencies
 /node_modules
+/OriginalesApp-scr
 /.pnp
 .pnp.js
 
