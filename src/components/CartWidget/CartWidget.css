@@ -1,0 +1,21 @@
+.cartWidget {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.contador {
+    background-color: darkgrey;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    padding-top: 8px;
+}
+
+.carro {
+    color: black;
+}
