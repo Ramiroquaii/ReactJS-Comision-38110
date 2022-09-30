@@ -4,15 +4,21 @@ import Carro from "./components/CartWidget/CartWidget.js";
 import ItemList from "./components/ItemListContainer/ItemListContainer.js";
 import Footer from "./components/Footer/Footer.js";
 
+
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
 function App() {
     return (
-        <React.Fragment>
+        <BrowserRouter>
+
             <NavBar>
                 <Carro />
             </NavBar>
-            <ItemList greeting="BIENVENIDO" />
+            
+            <ItemList greeting="BIENVENIDO !!" />
+
             <Footer />
-        </React.Fragment>
+        </BrowserRouter>
     );
 }
 

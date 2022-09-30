@@ -1,13 +1,14 @@
 import './CartWidget.css';
 import carrito from './carrito.png';
-import carritoLleno from './carritoLleno.png';
+// import carritoLleno from './carritoLleno.png';
 
-function SeccionCarrito(props) {
+function SeccionCarrito({contador}) {
+
     return (
         <div className="cartWidget">
 
             <div className="contador">
-                <p>{props.contador}</p>
+                <p>{contador}</p>
             </div>
 
             <div className="carro">

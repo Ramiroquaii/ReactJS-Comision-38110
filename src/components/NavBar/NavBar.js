@@ -1,6 +1,7 @@
 import './NavBar.css';
 import logo from './logo192.png';
 import Carro from '../CartWidget/CartWidget.js';
+import { Link } from 'react-router-dom';
 
 export default function NavBar() {
     return (
@@ -8,22 +9,22 @@ export default function NavBar() {
             <div className="navLogo">
                 <img src={logo} alt="Logo React JS"></img>
                 <div className="navSection">
-                    <a href="/" className="titulo-web">e-REACT</a>
+                    <Link to={'/'}><p className="titulo-web">e-REACT</p></Link>
                     <p>Tienda de componentes...</p>
                 </div>
             </div>
             <ul>
                 <li className="activo">
-                    <a href="/precios">Productos</a>
+                    <Link to={'/Productos'}>Productos</Link>
                 </li>
                 <li>
-                    <a href="/acercade">Nosotos</a>
+                    <Link to={'/Nosotros'}>Nosotos</Link>
                 </li>
                 <li>
-                    <a href="/ubicacion">Ubicación</a>
+                    <Link to={'/Ubicacion'}>Ubicación</Link>
                 </li>
                 <li>
-                    <a href="/contacto">Contacto</a>
+                    <Link to={'/Contacto'}>Contacto</Link>
                 </li>
             </ul>
             <Carro contador="0"/>
