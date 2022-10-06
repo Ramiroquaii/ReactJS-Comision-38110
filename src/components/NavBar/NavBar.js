@@ -3,7 +3,7 @@ import logo from './logo192.png';
 import Carro from '../CartWidget/CartWidget.js';
 import { Link } from 'react-router-dom';
 
-export default function NavBar() {
+export default function NavBar({prodCounter}) {
     return (
         <nav className="nav">
             <div className="navLogo">
@@ -27,7 +27,7 @@ export default function NavBar() {
                     <Link to={'/Contacto'}>Contacto</Link>
                 </li>
             </ul>
-            <Carro contador="0"/>
+            <Carro contador={prodCounter}/>
         </nav>
     );
 }

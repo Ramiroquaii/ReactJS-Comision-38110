@@ -3,28 +3,35 @@ import './ItemListContainer.css';
 import React from 'react';
 
 import Home from '../../routes/Home';
-import Detalle from '../../routes/Detalle';
+import DetalleProductos from '../../routes/DetalleProductos.js';
 
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import ProductoId from '../../routes/ProductoId.js';
+import Nosotros from '../../routes/Nosotros.js';
+import Ubicacion from '../../routes/Ubicacion.js';
+import Contacto from '../../routes/Contacto.js';
+import Error from '../../routes/Error.js';
+
+import { Routes, Route } from 'react-router-dom';
 
 function SeccionContenedor({greeting}) {
     return (
-        <React.Fragment>
-            
+
         <div className="container">
+            
             <h1>{greeting}</h1>
-        
+
             <Routes>
                 <Route exact path="/" element={<Home />} />
-                <Route exact path="/productos" element={<Detalle />} />
-                <Route exact path="/nosotros" element={<Detalle />} />
-                <Route exact path="/ubicacion" element={<Detalle />} />
-                <Route exact path="/contacto" element={<Detalle />} />
+                <Route exact path="/productos" element={<DetalleProductos />} />
+                <Route exact path="/producto/:id" element={<ProductoId />} />
+                <Route exact path="/nosotros" element={<Nosotros />} />
+                <Route exact path="/ubicacion" element={<Ubicacion />} />
+                <Route exact path="/contacto" element={<Contacto />} />
+                <Route path="*" element={<Error />} />
+
             </Routes>
-                
+
         </div>
-        
-        </React.Fragment>
     );
 }
 
