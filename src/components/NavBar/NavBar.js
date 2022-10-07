@@ -15,16 +15,16 @@ export default function NavBar({prodCounter}) {
             </div>
             <ul>
                 <li className="activo">
-                    <Link to={'/Productos'}>Productos</Link>
+                    <Link to={'/productos'}>Productos</Link>
                 </li>
                 <li>
-                    <Link to={'/Nosotros'}>Nosotos</Link>
+                    <Link to={'/nosotros'}>Nosotos</Link>
                 </li>
                 <li>
-                    <Link to={'/Ubicacion'}>Ubicación</Link>
+                    <Link to={'/ubicacion'}>Ubicación</Link>
                 </li>
                 <li>
-                    <Link to={'/Contacto'}>Contacto</Link>
+                    <Link to={'/contacto'}>Contacto</Link>
                 </li>
             </ul>
             <Carro contador={prodCounter}/>

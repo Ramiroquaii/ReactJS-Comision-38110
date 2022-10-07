@@ -9,7 +9,7 @@ function ProductCard({idProducto, nombre, imagen, descripcion, precio}) {
             <img src={imagen} alt={nombre}></img>
             <p>{descripcion}</p>
             <p>{precio}</p>
-            <Link className="" to={`/Producto/${idProducto}`}>VER</Link>
+            <Link className="" to={`/productos/${idProducto}`}>VER</Link>
         </div>
     );
 }
