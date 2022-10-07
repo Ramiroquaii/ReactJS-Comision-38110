@@ -1,3 +1,4 @@
+import './rutas.css';
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 
@@ -12,16 +13,18 @@ const ProductoId = () => {
             
         }, [id]);
 
-        console.log(character);
     return (
         <div>
             {Object.keys(character).length === 0 ? (
             <div>Cargando...</div>
             ) : (
-            <div>
-                <p>name: {character.name}</p>
-                <p>height: {character.id}</p>
-                <Link to={'/productos'}>Back</Link>
+            <div className='detallePorId'>
+                <p>ID: {character.id}</p>
+                <p>Nombre: {character.name}</p>
+                <img src={character.image} alt="Carrito"></img>
+                <p>Especie: {character.species}</p>
+                <p>Apariciones: {character.episode.length}</p>
+                <Link to={'/productos'}>VOLVER</Link>
             </div>
             )}
         </div>

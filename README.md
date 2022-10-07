@@ -5,6 +5,28 @@ Alumno: RAMIRO O. VECHIOLA
 
 Profesor: Félix Blanco
 
+
+Segunda PREENTERGA del Proyecto Final
+JUEVES 06/10/2022
+
+Implementacion de API didactica a modo de productos.
+Fetch de objetos simulando productos.
+Uso de Rutas para navegacion.
+Ruta de ERROR con comodin *
+Filter de resultados.
+UseEstate - UseEffect para disparar cambios de estado y renderizar.
+Condicional para mostrar elementos completos o por filtro dentro del componente DetalleProductos.js.
+Preparacion de las secciones generales de la App desde la Barra de Navegación.
+Incorpoación de carrito y contados (se muestra lleno o vacio dependiendo del caso).
+
+Es necesaria la incroporación de "Contexto" para lograr mejor fluidez y actualización de componentes como
+asi tambien eventos y botones para aggregar productos, eliminar y actualizar estados relacionados con estas
+acciones (contadores).
+
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+
 PREENTREGA JUEVES 22/09/2022
 Primera pre-entrega del Proyecto Final:
 
@@ -21,9 +43,8 @@ Consigna:
 3- Crea un componente contenedor ItemListContainer.js con una prop greeting, y muestra el mensaje dentro del contenedor con el styling integrado. Impórtalo dentro de App.js, y abajo de NavBar.js. 
 
 
-
-
 -----------------------------------------------------------------------------------------------------------------------------
+
 
 
 
