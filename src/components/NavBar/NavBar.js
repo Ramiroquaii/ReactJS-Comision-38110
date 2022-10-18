@@ -1,10 +1,10 @@
 
 import './NavBar.css';
 import logo from './logo192.png';
-import Carro from '../CartWidget/CartWidget.js';
+import Carrito from '../CartWidget/CartWidget.js';
 import { Link } from 'react-router-dom';
 
-export default function NavBar({prodCounter}) {
+export default function NavBar() {
     return (
         <nav className="nav">
             <div className="navLogo">
@@ -14,21 +14,23 @@ export default function NavBar({prodCounter}) {
                     <p>Tienda de componentes...</p>
                 </div>
             </div>
-            <ul>
-                <li className="activo">
-                    <Link to={'/productos'}>Productos</Link>
-                </li>
-                <li>
-                    <Link to={'/nosotros'}>Nosotos</Link>
-                </li>
-                <li>
-                    <Link to={'/ubicacion'}>Ubicación</Link>
-                </li>
-                <li>
-                    <Link to={'/contacto'}>Contacto</Link>
-                </li>
-            </ul>
-            <Carro contador={prodCounter}/>
+            <div className="menu">
+                <ul>
+                    <li className="activo">
+                        <Link to={'/productos'}>Productos</Link>
+                    </li>
+                    <li>
+                        <Link to={'/nosotros'}>Nosotos</Link>
+                    </li>
+                    <li>
+                        <Link to={'/ubicacion'}>Ubicación</Link>
+                    </li>
+                    <li>
+                        <Link to={'/contacto'}>Contacto</Link>
+                    </li>
+                </ul>
+            </div>
+            <Carrito />
         </nav>
     );
 }

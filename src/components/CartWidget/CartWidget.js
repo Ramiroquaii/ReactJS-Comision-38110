@@ -1,28 +1,27 @@
 
-import React, { useEffect, useState } from 'react';
+//import React, { useEffect } from 'react';
+import React, { useContext } from 'react';
+//import React, { useEffect, useState } from 'react';
+
+import { CarritoContext } from '../../contexts/CarritoContext.js';
+
 import './CartWidget.css';
-import carrito from './carrito.png';
+import carritoVacio from './carrito.png';
 import carritoLleno from './carritoLleno.png';
 
-function SeccionCarrito({contador}) {
+function SeccionCarrito() {
 
-    const [numeroProductos, setCounter] = useState(0);
-
-    useEffect( () => {
-        if(contador >= 0) {
-            setCounter(contador);
-        }
-    }, [contador]);
+    const { contador } = useContext(CarritoContext);
 
     return (
         <div className="cartWidget">
 
             <div className="contador">
-                <p>{numeroProductos}</p>
+                <p>{contador}</p>
             </div>
 
             <div className="carro">
-                <img src={numeroProductos > 0 ? carritoLleno : carrito} alt="Carrito"></img>
+                <img src={contador > 0 ? carritoLleno : carritoVacio} alt="Carrito"></img>
             </div>
 
         </div>

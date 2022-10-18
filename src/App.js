@@ -1,7 +1,10 @@
 
 import React from 'react';
+
+import { CarritoProvider } from './contexts/CarritoContext.js';
+
 import NavBar from "./components/NavBar/NavBar.js";
-import ItemList from "./components/ItemListContainer/ItemListContainer.js";
+import ItemListContainer from "./components/ItemListContainer/ItemListContainer.js";
 import Footer from "./components/Footer/Footer.js";
 
 import { BrowserRouter } from 'react-router-dom';
@@ -9,13 +12,21 @@ import { BrowserRouter } from 'react-router-dom';
 function App() {
 
     return (
-        <BrowserRouter>
-            <NavBar prodCounter="0" />
+        <div>
+            <BrowserRouter>
             
-            <ItemList greeting="BIENVENIDO !!" />
+                <CarritoProvider>
+
+                    <NavBar />
+            
+                    <ItemListContainer greeting="BIENVENIDO !!" />
+
+                </CarritoProvider>
+
+            </BrowserRouter>
 
             <Footer />
-        </BrowserRouter> 
+        </div>
     );
 }
 
