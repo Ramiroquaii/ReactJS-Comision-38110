@@ -1,8 +1,5 @@
 
-//import React, { useEffect } from 'react';
 import React, { useContext } from 'react';
-//import React, { useEffect, useState } from 'react';
-
 import { CarritoContext } from '../../contexts/CarritoContext.js';
 
 import './CartWidget.css';

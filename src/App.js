@@ -2,30 +2,30 @@
 import React from 'react';
 
 import { CarritoProvider } from './contexts/CarritoContext.js';
+import { BrowserRouter } from 'react-router-dom';
 
+import Firebase from "./components/firebase/firebase.js";
+import Titulo from "./components/Titulo/Titulo.js";
 import NavBar from "./components/NavBar/NavBar.js";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer.js";
 import Footer from "./components/Footer/Footer.js";
-
-import { BrowserRouter } from 'react-router-dom';
 
 function App() {
 
     return (
         <div>
-            <BrowserRouter>
-            
-                <CarritoProvider>
+        <Firebase />
+        <BrowserRouter>
+            <CarritoProvider>
 
-                    <NavBar />
-            
-                    <ItemListContainer greeting="BIENVENIDO !!" />
+                <NavBar />
+                <Titulo />
+                <ItemListContainer />
 
-                </CarritoProvider>
-
-            </BrowserRouter>
+            </CarritoProvider>
 
             <Footer />
+        </BrowserRouter>
         </div>
     );
 }
