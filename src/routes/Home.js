@@ -1,20 +1,21 @@
 
-import React, { useContext, useEffect } from 'react';
-import { CarritoContext } from '../contexts/CarritoContext.js';
+import React from 'react';
+
+import logoCoder from './coderLogo.png';
 
 const Home = () => {
 
-    const { setTituloRuta } = useContext(CarritoContext);
-
-    useEffect(() => {
-        update();
-    }, []);
-
-    const update = () => {
-        setTituloRuta("BIENVENIDO");
-    };
-
-    return <div>PAGINA PRINCIPAL</div>;
+    return (
+        <div className='home'>
+            <img src={logoCoder} alt="CoderHouse"></img>
+            <h2>Entrega Proyecto Final</h2>
+            <hr></hr>
+            <p>Curso REACT JS - Expira 30/10/2022</p>
+            <p>Comisión: 38110</p>
+            <p>Facilitador: Felix Blanco</p>
+            <p>Alumno: Ramiro Oscar Vechiola</p>
+        </div>
+    );
 };
 
 export default Home;

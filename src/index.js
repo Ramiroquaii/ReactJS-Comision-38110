@@ -1,6 +1,7 @@
+import './index.css';
+
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
@@ -17,7 +18,7 @@ const firebaseConfig = {
   messagingSenderId: "291144674617",
   appId: "1:291144674617:web:9114c919b89d5626a54ce8"
 };
-const app = initializeApp(firebaseConfig);  // Initialize Firebase
+initializeApp(firebaseConfig);  // Initialize Firebase
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

@@ -1,15 +1,14 @@
 import './ProductCard.css';
 import { Link } from 'react-router-dom';
 
-function ProductCard({idProducto, nombre, imagen, descripcion, precio}) {
-
+function ProductCard({props}) { //Se recibe un objeto producto.
+    
     return (
-        <div className="cardProduct">
-            <p>{nombre}</p>
-            <img src={imagen} alt={nombre}></img>
-            <p>{descripcion}</p>
-            <p>{precio}</p>
-            <Link className="" to={`/productos/detalle/${idProducto}`}>VER</Link>
+        <div className="cardProduct" key={props.id}>
+            <p>{props.nombre}</p>
+            <img src={props.imagen} alt={props.nombre}></img>
+            <p>{props.categoria}</p>
+            <Link className="" to={`/productos/categoria/${props.id}`}>VER</Link>
         </div>
     );
 }

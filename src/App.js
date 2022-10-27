@@ -1,31 +1,43 @@
+import './App.css';
 
 import React from 'react';
 
 import { CarritoProvider } from './contexts/CarritoContext.js';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import Firebase from "./components/firebase/firebase.js";
-import Titulo from "./components/Titulo/Titulo.js";
 import NavBar from "./components/NavBar/NavBar.js";
-import ItemListContainer from "./components/ItemListContainer/ItemListContainer.js";
 import Footer from "./components/Footer/Footer.js";
+import ProductList from './components/ProductListContainer/ProductList.js';
+import ProductDetail from './components/ProductDetailContainer/ProductDetail.js';
+
+import Home from './routes/Home';
+import Nosotros from './routes/Nosotros.js';
+import Ubicacion from './routes/Ubicacion.js';
+import Contacto from './routes/Contacto.js';
+import Error from './routes/Error.js';
 
 function App() {
 
     return (
         <div>
-        <Firebase />
-        <BrowserRouter>
-            <CarritoProvider>
-
-                <NavBar />
-                <Titulo />
-                <ItemListContainer />
-
-            </CarritoProvider>
-
-            <Footer />
-        </BrowserRouter>
+            <BrowserRouter>
+                <CarritoProvider>
+                    <NavBar />
+                    <div className="mainContainer">
+                        <Routes>
+                            <Route exact path="/" element={<Home />} />
+                            <Route exact path="/productos" element={<ProductList />} />
+                            <Route exact path="/productos/:categoria" element={<ProductList />} />
+                            <Route exact path="/productos/:categoria/:id" element={<ProductDetail />} />
+                            <Route exact path="/nosotros" element={<Nosotros />} />
+                            <Route exact path="/ubicacion" element={<Ubicacion />} />
+                            <Route exact path="/contacto" element={<Contacto />} />
+                            <Route path="*" element={<Error />} />
+                        </Routes>
+                    </div>
+                </CarritoProvider>
+                <Footer />
+            </BrowserRouter>
         </div>
     );
 }

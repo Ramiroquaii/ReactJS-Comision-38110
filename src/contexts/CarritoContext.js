@@ -4,7 +4,6 @@ const CarritoContext = React.createContext();
 
 const CarritoProvider = ({ children }) => {
 
-    const [tituloRuta, setTituloRuta] = useState("BIENVENIDOS");
     const [contador, setCantidad] = useState(0);
     const [prodEnCarrito, setCarrito] = useState([]);
 
@@ -19,17 +18,24 @@ const CarritoProvider = ({ children }) => {
 
     const agregarProdCarrito = (prod, cant) => {
         let aux = [...prodEnCarrito, prod];
-        setCarrito(aux);
+        console.log(aux);
+        setCarrito([aux]);
         agregarCantidad(cant);
+        console.log(prodEnCarrito);
     }
 
-    const quitarProdCarrito = () => {
 
+    const quitarProdCarrito = () => {
+        
+    };
+
+    const verCarrito = () => {
+        console.log(prodEnCarrito);
     };
 
     return (
-        <CarritoContext.Provider value={{ contador, tituloRuta,
-        agregarProdCarrito, quitarProdCarrito, setTituloRuta, agregarCantidad, quitarCantidad }}>
+        <CarritoContext.Provider value={{ contador,
+        agregarProdCarrito, quitarProdCarrito, agregarCantidad, quitarCantidad, verCarrito }}>
             {children}
         </CarritoContext.Provider>
     );

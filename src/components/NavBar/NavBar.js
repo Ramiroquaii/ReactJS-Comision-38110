@@ -5,6 +5,12 @@ import Carrito from '../CartWidget/CartWidget.js';
 import { Link } from 'react-router-dom';
 
 export default function NavBar() {
+
+    const setActiveTab = (e) => {
+        e.target.parentElement.parentElement.childNodes.forEach(element => element.className = "");
+        e.target.parentElement.className = "activo";
+    }
+
     return (
         <nav className="nav">
             <div className="navLogo">
@@ -16,17 +22,17 @@ export default function NavBar() {
             </div>
             <div className="menu">
                 <ul>
-                    <li className="activo">
-                        <Link to={'/productos'}>Productos</Link>
+                    <li>
+                        <Link to={'/productos'} onClick={setActiveTab}>Productos</Link>
                     </li>
                     <li>
-                        <Link to={'/nosotros'}>Nosotos</Link>
+                        <Link to={'/nosotros'} onClick={setActiveTab}>Nosotos</Link>
                     </li>
                     <li>
-                        <Link to={'/ubicacion'}>Ubicación</Link>
+                        <Link to={'/ubicacion'} onClick={setActiveTab}>Ubicación</Link>
                     </li>
                     <li>
-                        <Link to={'/contacto'}>Contacto</Link>
+                        <Link to={'/contacto'} onClick={setActiveTab}>Contacto</Link>
                     </li>
                 </ul>
             </div>

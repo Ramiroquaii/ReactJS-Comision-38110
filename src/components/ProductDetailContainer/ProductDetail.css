@@ -1,3 +1,4 @@
+/* *** ▼ CSS para mostrar el detalle de un producto buscado por su ID ▼ *** */
 .detallePorId {
     display: flex;
     flex-direction: column;
@@ -10,3 +11,4 @@
     padding-top: 10px;
     padding-bottom: 10px;
 }
+/* *** ▲ CSS para mostrar el detalle de un producto buscado por su ID ▲ *** */
