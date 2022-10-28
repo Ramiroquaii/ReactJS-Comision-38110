@@ -10,17 +10,18 @@ function SeccionCarrito() {
 
     const { contador } = useContext(CarritoContext);
 
+    const desplegarCarrito = () => {
+        alert("HOLA");
+    };
+
     return (
         <div className="cartWidget">
-
             <div className="contador">
                 <p>{contador}</p>
             </div>
-
             <div className="carro">
-                <img src={contador > 0 ? carritoLleno : carritoVacio} alt="Carrito"></img>
+                <img src={contador > 0 ? carritoLleno : carritoVacio} alt="Carrito" onClick = { () => desplegarCarrito() }></img>
             </div>
-
         </div>
     );
 }
