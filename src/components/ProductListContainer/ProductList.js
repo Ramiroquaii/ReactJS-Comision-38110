@@ -1,9 +1,8 @@
 import './ProductList.css';
 
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect } from 'react';
 import { getFirestore, collection, getDocs, query, where} from 'firebase/firestore';
 import { Link, useParams } from 'react-router-dom';
-import { CarritoContext } from '../../contexts/CarritoContext.js';
 
 import Loader from '../Loader/Loader.js';
 import CardProd from '../ProductCard/ProductCard.js';
@@ -12,10 +11,6 @@ const ProductList = () => {
 
     const { categoria } = useParams();
     const [productos, setProductos] = useState([]);
-
-    const { agregarCantidad } = useContext(CarritoContext);
-    const { quitarCantidad } = useContext(CarritoContext);
-    const { verCarrito } = useContext(CarritoContext);
 
     useEffect(() => {
         if(categoria){
@@ -39,11 +34,6 @@ const ProductList = () => {
             ) : (
                 <div className='productList'>
                     <h1>{!categoria ? "NUESTROS PRODUCTOS" : `Categoría: ${categoria}`}</h1>            
-                    <div className='filtro'>
-                        <button onClick={() => agregarCantidad(1)}>Agregar</button>
-                        <button onClick={() => verCarrito()}>VER Carrito</button>
-                        <button onClick={() => quitarCantidad(1)}>Quitar</button>
-                    </div>
                     <div className='filtro'>
                         <Link className="btn" to={`/productos/Humano`}>HUMANOS</Link>
                         <Link className="btn" to={`/productos/Alien`}>ALIENIJENAS</Link>

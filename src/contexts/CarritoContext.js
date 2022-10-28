@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 
-import Swal from 'sweetalert2'
-
 const CarritoContext = React.createContext();
 
 const CarritoProvider = ({ children }) => {
@@ -30,7 +28,7 @@ const CarritoProvider = ({ children }) => {
     };
 
     return (
-        <CarritoContext.Provider value={{ contador,
+        <CarritoContext.Provider value={{ contador, prodEnCarrito,
         agregarProdCarrito, quitarProdCarrito, agregarCantidad, quitarCantidad, verCarrito }}>
             {children}
         </CarritoContext.Provider>

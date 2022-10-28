@@ -29,7 +29,7 @@ const ProductDetail = () => {
     };
 
     const addCarrito = () => {
-        if(cantCompra == 0){
+        if(cantCompra === 0){
             Swal.fire({
                 title: 'Cantidad',
                 text: 'No puede ser 0 !!',

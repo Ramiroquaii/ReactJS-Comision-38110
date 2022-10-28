@@ -5,14 +5,16 @@ import { CarritoContext } from '../../contexts/CarritoContext.js';
 import './CartWidget.css';
 import carritoVacio from './carrito.png';
 import carritoLleno from './carritoLleno.png';
+import {useCallback} from 'react';
+import {useNavigate} from 'react-router-dom';
 
 function SeccionCarrito() {
 
     const { contador } = useContext(CarritoContext);
-
-    const desplegarCarrito = () => {
-        alert("HOLA");
-    };
+ 
+    const navigate = useNavigate();
+    const handleOnClick = useCallback(() => navigate('/carrito', {replace: true}), [navigate]);
+    
 
     return (
         <div className="cartWidget">
@@ -20,7 +22,7 @@ function SeccionCarrito() {
                 <p>{contador}</p>
             </div>
             <div className="carro">
-                <img src={contador > 0 ? carritoLleno : carritoVacio} alt="Carrito" onClick = { () => desplegarCarrito() }></img>
+                <img src={contador > 0 ? carritoLleno : carritoVacio} alt="Carrito" onClick = { handleOnClick }></img>
             </div>
         </div>
     );
