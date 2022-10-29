@@ -26,3 +26,9 @@
     margin-bottom: 20px;
 }
 /* *** ▲ CSS para la RUTA Home.js ▲ *** */
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button { 
+	-webkit-appearance: none;
+    appearance: none;
+}

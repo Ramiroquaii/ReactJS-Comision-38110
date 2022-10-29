@@ -1,8 +1,25 @@
-import React from "react";
+import React, { useContext } from 'react';
+import { CarritoContext } from '../contexts/CarritoContext.js';
+import { Link } from 'react-router-dom';
 
-function Contacto() {
+import './rutas.css';
+import ProductoTicket from '../components/ProductCardTicket/ProductTicket.js';
 
-    return <div>ESTO ES EL CARRITO</div>;
+function Carrito() {
+
+    const { prodEnCarrito } = useContext(CarritoContext);
+
+    return (
+        <div>
+            <h1>PRODUCTOS SELECCIONADOS</h1> 
+            {prodEnCarrito.map((producto) => (
+                <div key={producto.id}>
+                    <ProductoTicket prod={producto} />
+                </div>
+            ))}
+            <button><Link to={'/compra'} >FINALIZAR COMPRA</Link></button>
+        </div>
+    );
 };
 
-export default Contacto;
+export default Carrito;

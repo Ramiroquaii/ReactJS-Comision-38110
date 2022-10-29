@@ -13,7 +13,7 @@ import Swal from 'sweetalert2'
 function SeccionCarrito() {
 
     const { contador } = useContext(CarritoContext);
- 
+
     const navigate = useNavigate();
     const handleOnClick = useCallback(() => navigate('/carrito', {replace: true}), [navigate]);
 

@@ -1,0 +1,11 @@
+.lineaTicket {
+    display: flex;
+    direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.lineaTicket img {
+    width: 80px;
+    height: 80px;
+}
