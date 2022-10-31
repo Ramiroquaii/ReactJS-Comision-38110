@@ -13,6 +13,7 @@ Simulación de un comercio electrónico, no se implemento login o autenticación
 - **Se actualiza el stock de productos disponibles con cada orden de compra generada.**
 - **Se validan las cantidade tope por limite de stock**
 - **Ningún numeradores de cantidad puede ser < 0**
+- **La visualización en dispositivos móiles no esta optimizada al 100%,aún presenta inconsistensias con los tamaños de pantalla pequeños.**
 
 **Se realiza un Build del proyecto para probar funcionalidad:**
 - WEB-SERVER: *https://vechiolareactcoder38110.000webhostapp.com/*
