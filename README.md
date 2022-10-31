@@ -14,6 +14,10 @@ Simulación de un comercio electrónico, no se implemento login o autenticación
 - **Se validan las cantidade tope por limite de stock**
 - **Ningún numeradores de cantidad puede ser < 0**
 
+**Se realiza un Build del proyecto para probar funcionalidad:**
+- WEB-SERVER: *https://vechiolareactcoder38110.000webhostapp.com/*
+- REPOSITORIO: *https://github.com/Ramiroquaii/ReactJS-Comision-38110.git*
+
 # COMPONENTES:
 
 ## NavBar
