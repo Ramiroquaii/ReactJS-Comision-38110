@@ -36,7 +36,7 @@ const ProductList = () => {
                     <h1>{!categoria ? "NUESTROS PRODUCTOS" : `Categoría: ${categoria}`}</h1>            
                     <div className='filtro'>
                         <Link className="btn" to={`/productos/Humano`}>HUMANOS</Link>
-                        <Link className="btn" to={`/productos/Alien`}>ALIENIJENAS</Link>
+                        <Link className="btn" to={`/productos/Alien`}>ALIENÍGENAS</Link>
                     </div>
                     <div className='productosContainer'>
                         {productos.map((item) => (

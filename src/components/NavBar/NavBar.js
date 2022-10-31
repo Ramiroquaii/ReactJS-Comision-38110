@@ -14,7 +14,7 @@ export default function NavBar() {
     return (
         <nav className="nav">
             <div className="navLogo">
-                <img src={logo} alt="Logo React JS"></img>
+                    <Link to={'/'}><img src={logo} alt="Logo React JS"></img></Link>
                 <div className="navSection">
                     <Link to={'/'}><p className="titulo-web">e-REACT</p></Link>
                     <p>Tienda de componentes...</p>

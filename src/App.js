@@ -13,6 +13,7 @@ import ProductDetail from './components/ProductDetailContainer/ProductDetail.js'
 import Home from './routes/Home.js';
 import Carrito from './routes/Carrito.js';
 import Compra from './routes/Compra.js';
+import Gracias from './routes/Gracias.js';
 import Nosotros from './routes/Nosotros.js';
 import Ubicacion from './routes/Ubicacion.js';
 import Contacto from './routes/Contacto.js';
@@ -33,6 +34,7 @@ function App() {
                             <Route exact path="/productos/:categoria/:id" element={<ProductDetail />} />
                             <Route exact path="/carrito" element={<Carrito />} />
                             <Route exact path="/compra" element={<Compra />} />
+                            <Route exact path="/gracias" element={<Gracias />} />
                             <Route exact path="/nosotros" element={<Nosotros />} />
                             <Route exact path="/ubicacion" element={<Ubicacion />} />
                             <Route exact path="/contacto" element={<Contacto />} />

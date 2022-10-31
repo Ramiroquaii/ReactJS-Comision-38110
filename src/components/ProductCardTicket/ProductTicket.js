@@ -7,10 +7,7 @@ import Swal from 'sweetalert2'
 function ProductoTicket({prod}) {
 
     const { actualizarUnidades } = useContext(CarritoContext);
-    const { agregarCantidad } = useContext(CarritoContext);
-    const { quitarCantidad } = useContext(CarritoContext);
     const { quitarProdCarrito } = useContext(CarritoContext);
-    const { costoTotal } = useContext(CarritoContext);
     const [ cantCompra, setCantCompra ] = useState(prod.comprado);
 
     const changeCantidad = (ev) => {
@@ -19,14 +16,12 @@ function ProductoTicket({prod}) {
             if(num <= prod.cantidad){
                 setCantCompra(num);
                 actualizarUnidades(prod.id, num);
-                agregarCantidad(1);
             }
         }else if(ev.target.id === "remove"){
             let num = cantCompra - 1;
             if(num > 0){
                 setCantCompra(num);
                 actualizarUnidades(prod.id, num);
-                quitarCantidad(1);
             }else{
                 Swal.fire({
                     title: 'Desea quitar del carrito ?',
@@ -36,7 +31,6 @@ function ProductoTicket({prod}) {
                 }).then((result) => {
                     if (result.isConfirmed) {
                         quitarProdCarrito(prod.id);
-                        quitarCantidad(1);
                     }
                 });
             }
@@ -44,29 +38,37 @@ function ProductoTicket({prod}) {
     };
 
     return (
-    <div>    
+    <div className='marcoTicket'>    
         <div className='lineaTicket' key={prod.id}>
-            <div>
+            <div className='lineaImg'>
                 <img src={prod.imagen} alt={prod.nombre}></img>
             </div>  
-            <div>
-                <p>Nombre: {prod.nombre}</p>
-                <p>Categoría: {prod.categoria}</p>
-                <p>Precio: {prod.precio}</p>
-                <p>Disponible: {prod.cantidad}</p>
+            <div className='lineaDatos'>
+                <div className='datosLabel'>
+                    <p>Nombre:</p>
+                    <p>Categoría:</p>
+                    <p>Precio:</p>
+                    <p>Disponible:</p>
+                </div>
+                <div className='datosValor'>
+                    <p>{prod.nombre}</p>
+                    <p>{prod.categoria}</p>
+                    <p>$ {(prod.precio).toFixed(2)}</p>
+                    <p>- {prod.cantidad} -</p>
+                </div>
             </div>  
-            <div>
+            <div className='lineaCantidad'>
                 <p>Cantidad:</p>
-                <button id="add" onClick = { changeCantidad }>+</button>
-                <input type="text" value={cantCompra} min="0" max={prod.cantidad} readOnly={true} ></input>
-                <button id="remove" onClick = { changeCantidad }>-</button>
+                <div>
+                    <button className='btnAddRem' id="add" onClick = { (ev) => changeCantidad(ev) }>+</button>
+                    <input type="text" value={cantCompra} min="0" max={prod.cantidad} readOnly={true} ></input>
+                    <button className='btnAddRem' id="remove" onClick = { (ev) => changeCantidad(ev) }>-</button>
+                </div>
             </div>
-            <div>
-                <p>Sub-Total: $ {(cantCompra * prod.precio).toFixed(2)}</p>
+            <div className='lineaSubTotal'>
+                <p>Sub-Total:</p> 
+                <p>$ {(cantCompra * prod.precio).toFixed(2)}</p>
             </div>  
-        </div>
-        <div>
-            <p>TOTAL: $ {costoTotal.toFixed(2)}</p>
         </div>
     </div>
     );

@@ -1,12 +1,105 @@
-# REACT JS-Comision-38110
-Coder House - Curso React JS - Comisión #38110
+# REACT JS - Comision - 38110
+Coder House - Curso React JS
 
-Alumno: RAMIRO O. VECHIOLA
+*Alumno:* **RAMIRO O. VECHIOLA**
 
-Profesor: Félix Blanco
+*Profesor:* **FELIX BLANCO**
 
 
-Segunda PREENTERGA del Proyecto Final
+# Proyecto Final
+DOMINGO 30/10/2022 00:00hs
+
+Simulación de un comercio electrónico, no se implemento login o autenticación simplemente se solicitan datos personales para finalizar un pedido u orden de compra impactando estos datos junto con los productos seleccionados y total de precion en la base de daros no relacional FIREBASE obtenido el identificador de la transacción.
+- **Se actualiza el stock de productos disponibles con cada orden de compra generada.**
+- **Se validan las cantidade tope por limite de stock**
+- **Ningún numeradores de cantidad puede ser < 0**
+
+# COMPONENTES:
+
+## NavBar
+Barra de navegacion de aplicacion y simulacion de pagina tradicional por secciones:
+Home - Pagina de inicio, bienvenida.
+Productos - Pagina principal de la APP.
+Nosotros - Simulación para agregar contenido posteriormente.
+Contacto - Simulación para agregar contenido posteriormente.
+Ubicacion - implementacion de iframe con mapa google.
+
+## CartWidget
+Contador de items seleccionados para comprar (de 0 a N - no puede ser < 0), ademas se muestra imagen ilustrativa de referencia que mustra si existen o no elementos seleccionados.
+
+## Footer
+Pie de pagina con links externos a redes sociales de contacto.
+
+## Loader
+Elemento para representar tiempos de espera o darilusion de trabajo mientras se carga contenido.
+
+## ProductCard
+Caja contenedora para mostras productos.
+
+## ProductListContainer
+Componente que renderiza la lista de productos disponibles luego de consultas Firebase. Permite resolver la agrupación por categorias de los productos.
+
+## ProductDetailContainer
+Componente que renderiza la información completa y detallada del producto seleccionado y permite agregar los productos al carrito dependiendo de la disponibilidad de stock.
+
+## ProductCardTicket
+Componente que muestra el producto contenido en el carrito, lista los productos seleccionados con sus cantidades ademas de totalizar el precio unitario y total. Ademas permite modificar simando o restando mas unidades de cada producto seleccionado.
+
+---
+
+# CONTEXTO:
+## CarritoContext
+Permite compartir la informacion en forma transversal a todos los componente del arbol, se comparten y actualizan:
+Contador de Unidades en Carrito.
+Vectos de Productos seleccionados.
+Valor total acumulado de la compra.
+
+---
+
+# FIREBASE
+Implementado para persistir datos y almacenar repositorio de productos simulados:
+
+Coleccion items: (productos disponibles)
+item {
+    nombre: Producto1,
+    categoría: Agrupación por tipo,
+    imagen: URL de la imagen,
+    cantidad: stock,
+    precio: precio unitario,
+}
+
+Coleccion ordenes: (pedidos realizados - compras)
+ordenes {
+    nombre: nombre provisto por el comprador,
+    apellido: apellido provisto por el comprador,
+    telefono: telefono provisto por el comprador,
+    correo: email provisto por el comprador,
+    compraItems: [] vector de items comprados,
+    total: precio acumulado final,
+}
+
+# PAGES - ROUTES - LINKS
+## Home
+Bienvenida.
+
+## Carrito
+Muestas el contenido del carrito.
+
+## Compra
+Solicita datos personales adicionales antes de confirmar el pedido.
+
+## Gracias
+Finaliza la compra y resetea la aplicacion.
+
+## Error
+En caso de una ruta equivocada.
+
+## Nosotros - Ubicacion - Contacto
+Simulacion de contenido adicional a la aplicacion, informacion complementaris NO implementada.
+
+---
+
+# Segunda PREENTERGA del Proyecto Final
 JUEVES 06/10/2022
 
 Implementacion de API didactica a modo de productos.
@@ -23,11 +116,9 @@ Es necesaria la incroporación de "Contexto" para lograr mejor fluidez y actuali
 asi tambien eventos y botones para aggregar productos, eliminar y actualizar estados relacionados con estas
 acciones (contadores).
 
+---
 
------------------------------------------------------------------------------------------------------------------------------
-
-
-PREENTREGA JUEVES 22/09/2022
+# PREENTREGA JUEVES 22/09/2022
 Primera pre-entrega del Proyecto Final:
 
 Consigna:
@@ -42,81 +133,4 @@ Consigna:
 
 3- Crea un componente contenedor ItemListContainer.js con una prop greeting, y muestra el mensaje dentro del contenedor con el styling integrado. Impórtalo dentro de App.js, y abajo de NavBar.js. 
 
-
------------------------------------------------------------------------------------------------------------------------------
-
-
-
-
-# ↓ REACT APLICATION REDAME AUTOMATICALLY CREATED ↓
-
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---

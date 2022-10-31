@@ -11,4 +11,16 @@
     padding-top: 10px;
     padding-bottom: 10px;
 }
+
+.detallePorId input {
+    width: 60px;
+    height: 25px;
+    text-align: center;
+    margin: 2px;
+}
+
+.detallePorId button {
+    padding: 4px;
+    margin: 2px;
+}
 /* *** ▲ CSS para mostrar el detalle de un producto buscado por su ID ▲ *** */

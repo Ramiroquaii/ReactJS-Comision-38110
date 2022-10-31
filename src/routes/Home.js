@@ -1,6 +1,5 @@
 
 import React from 'react';
-
 import logoCoder from './coderLogo.png';
 
 const Home = () => {

@@ -1,4 +1,4 @@
-
+/* *** ▼ CSS para componente CartWidget.js ▼ *** */
 .cartWidget {
     display: flex;
     flex-direction: row;
@@ -27,3 +27,4 @@
     transform: rotateY(180deg);
     transform-style: preserve-3d;
 }
+/* *** ▲ CSS para componente CartWidget.js ▲ *** */

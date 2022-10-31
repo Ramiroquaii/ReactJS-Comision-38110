@@ -1,11 +1,64 @@
+
+.marcoTicket{
+    border: 2px solid rgba(119, 119, 119, 0.61);
+    border-radius: 8px;
+    margin-bottom: 2px;
+}
 .lineaTicket {
     display: flex;
     direction: row;
     align-items: center;
-    justify-content: center;
+    padding: 5px;
+}
+
+.lineaImg{
+    margin-right: 10px;
 }
 
 .lineaTicket img {
     width: 80px;
     height: 80px;
+}
+
+.lineaDatos{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 10px;
+}
+.datosLabel {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+.datosValor {
+    min-width: 128px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lineaCantidad {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 10px;
+}
+.lineaCantidad input {
+    width: 40px;
+    height: 25px;
+    margin-left: 5px;
+    margin-right: 5px;
+    text-align: center;
+}
+.btnAddRem {
+    width: 25px;
+    height: 25px;
+}
+
+.lineaSubTotal{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }

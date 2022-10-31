@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect, useContext } from 'react';
 import { getFirestore, doc, getDoc } from 'firebase/firestore';
-import { useParams, Link, Navigate, } from 'react-router-dom';
+import { useParams, Link, Navigate } from 'react-router-dom';
 import { CarritoContext } from '../../contexts/CarritoContext.js';
 
 import Swal from 'sweetalert2'
